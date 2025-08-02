@@ -10,6 +10,7 @@ const ReferEarnPage = () => {
   return (
     <div>
       <HeroSection_R/>
+       <hr className="w-full  border-t-[3px] border-gray-200 mt-6" />
       <ReferSteps/>
       <ReferBenefits/>
       <FAQ_R/>

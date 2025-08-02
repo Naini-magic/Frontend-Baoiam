@@ -48,6 +48,7 @@ const HeroSection_R = () => {
           className="w-[250px] sm:w-[320px] md:w-[380px] lg:w-[470px] object-contain"
         />
       </div>
+  
     </section>
   );
 };

@@ -41,7 +41,7 @@ export default function HeroSection_C() {
           <div className="flex md:justify-start justify-center">
             <a
               href="/Brochure/DS.pdf"
-              download="brochure.pdf"
+              download="DataScience_Brochure.pdf"
               className="inline-flex items-center bg-[#FF6501] text-white font-medium px-4 py-1 rounded-md hover:bg-orange-600 mb-6 text-[18px] mt-4"
             >
               Download Brochure

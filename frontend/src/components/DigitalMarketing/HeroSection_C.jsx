@@ -53,7 +53,6 @@
 
 //           {/* Instructor Info */}
 //           <div className="flex items-center space-x-4 mb-6 mt-4">
-            
 
 //             <div className="flex flex-col sm:flex-row items-center justify-center">
 //               <img
@@ -259,34 +258,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { HiOutlineDownload } from "react-icons/hi";
@@ -322,14 +293,14 @@ export default function HeroSection_C() {
           </h1>
 
           <p className="w-full text-center md:text-left text-[16px] sm:text-[18px] md:text-[28px] mb-4 font-semibold">
-             Build <span className="text-orange-500">AI-Powered</span> Brand &
+            Build <span className="text-orange-500">AI-Powered</span> Brand &
             <span className="text-orange-500"> Grow Digitally</span>
           </p>
 
           <div className="flex md:justify-start justify-center">
             <a
               href="/Brochure/DM.pdf"
-              download="brochure.pdf"
+              download="DigitalMarketing_Brochure.pdf"
               className="inline-flex items-center bg-[#FF6501] text-white font-medium px-4 py-1 rounded-md hover:bg-orange-600 mb-6 text-[18px] mt-4"
             >
               Download Brochure
@@ -338,8 +309,6 @@ export default function HeroSection_C() {
 
           {/* Instructor Info */}
           <div className="flex items-center space-x-6 mb-6 mt-4">
-            
-
             <div className="flex flex-col sm:flex-row items-center justify-center">
               <img
                 src={Expert}
@@ -357,7 +326,9 @@ export default function HeroSection_C() {
                 alt="Learners Icon"
                 className="w-[28px] h-[28px] object-cover rounded-full ml-2 mr-1"
               />
-              <p className="text-[10px] sm:text-[14px] text-[#1B1B1B99] mt-2">Hindi, English</p>
+              <p className="text-[10px] sm:text-[14px] text-[#1B1B1B99] mt-2">
+                Hindi, English
+              </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center">
               <img
@@ -421,7 +392,7 @@ export default function HeroSection_C() {
             </h2>
             <div className="flex flex-wrap gap-1 sm:gap-2 justify-center md:justify-start">
               {[
-                 "SEO (Search Engine Optimization)",
+                "SEO (Search Engine Optimization)",
                 "Technical SEO",
                 "Google Ads",
                 "Bing Ads",
@@ -522,9 +493,20 @@ export default function HeroSection_C() {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 p-2">
-                <button className="w-full sm:w-[127px] text-[16px] bg-orange-500 text-white py-1 sm:py-2 rounded-lg font-medium hover:bg-orange-700 transition">
-                  Buy Now
-                </button>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://pages.razorpay.com/pl_QzDfPkHIHxIWcY/view",
+                        "_blank",
+                        "noopener,noreferrer"
+                      )
+                    }
+                    className="w-[127px] text-xl bg-orange-500 text-white py-1 rounded-lg font-medium hover:bg-orange-700 transition"
+                  >
+                    Buy Now
+                  </button>
+                </div>
                 <button className="w-full sm:w-[137px] text-[16px] bg-black text-white py-1 sm:py-2 rounded-lg font-medium hover:bg-gray-700 transition">
                   Add to Cart
                 </button>

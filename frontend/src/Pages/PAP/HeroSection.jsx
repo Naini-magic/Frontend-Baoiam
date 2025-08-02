@@ -153,7 +153,7 @@ const HeroSection = () => {
   return (
     <div className="w-full bg-white">
       {/* Top Banner */}
-      <div className="w-full bg-orange-500 text-white text-center py-2 text-[26px] font-medium">
+      <div className="w-full bg-orange-500 text-white text-center py-2 text-[26px] font-medium mt-5">
         Next batch starts on ⌛️ 5th August. Hurry, limited seats left!
       </div>
 

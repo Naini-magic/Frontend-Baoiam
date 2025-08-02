@@ -22,6 +22,7 @@ const steps = [
 const ReferSteps = () => {
   return (
     <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24 text-center font-['Poppins']">
+     
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Steps</h2>
       <p className="text-gray-600 text-base sm:text-lg mb-12">

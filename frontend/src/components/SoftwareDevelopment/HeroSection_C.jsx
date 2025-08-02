@@ -40,7 +40,7 @@ export default function HeroSection_C() {
           <div className="flex md:justify-start justify-center">
             <a
               href="/Brochure/SD.pdf"
-              download="brochure.pdf"
+              download="SoftwareDevelopment_Brochure.pdf"
               className="inline-flex items-center bg-[#FF6501] text-white font-medium px-4 py-1 rounded-md hover:bg-orange-600 mb-6 text-[18px] mt-4"
             >
               Download Brochure
@@ -231,9 +231,20 @@ export default function HeroSection_C() {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 p-2">
-                <button className="w-full sm:w-[127px] text-[16px] bg-orange-500 text-white py-1 sm:py-2 rounded-lg font-medium hover:bg-orange-700 transition">
-                  Buy Now
-                </button>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://pages.razorpay.com/pl_QzDfPkHIHxIWcY/view",
+                        "_blank",
+                        "noopener,noreferrer"
+                      )
+                    }
+                    className="w-[127px] text-xl bg-orange-500 text-white py-1 rounded-lg font-medium hover:bg-orange-700 transition"
+                  >
+                    Buy Now
+                  </button>
+                </div>
                 <button className="w-full sm:w-[137px] text-[16px] bg-black text-white py-1 sm:py-2 rounded-lg font-medium hover:bg-gray-700 transition">
                   Add to Cart
                 </button>

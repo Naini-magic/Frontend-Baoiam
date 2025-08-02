@@ -54,11 +54,11 @@ const ContactUs = () => {
     <div>
       <div className="flex flex-col sm:flex-row justify-between gap-y-10 gap-x-8 p-8 max-w-[1300px] mx-auto bg-white sm:mt-10">
         {/* Left Column */}
-        <div className="w-full md:w-1/2 space-y-6">
-          <h1 className="text-3xl font-bold text-gray-800">
+        <div className="w-full md:w-1/2 space-y-4">
+          <h1 className="text-[42px] font-bold text-gray-800">
             Get In <span className="text-orange-500">Touch With Us</span>
           </h1>
-          <p className="text-black max-w-lg">
+          <p className="text-black text-[20px] max-w-lg">
             Have any query, feedback, or need assistance? We're just a message
             away. Fill out the form below, and our team will get back to you
             shortly.
@@ -66,21 +66,21 @@ const ContactUs = () => {
 
           {/* Contact Info Card */}
           <div className="bg-white shadow-md rounded-2xl p-6 space-y-5 max-w-lg">
-            <h3 className="text-xl font-semibold text-black">
+            <h3 className="text-2xl font-semibold text-black">
               Contact Information
             </h3>
 
-            <div className="flex items-center gap-3 text-[16px] text-black">
+            <div className="flex items-center gap-3 text-[18px] text-black">
               <MdEmail className="text-2xl" />
               <span>support@baoiam.com</span>
             </div>
 
-            <div className="flex items-center gap-3 text-[16px] text-black">
+            <div className="flex items-center gap-3 text-[18px] text-black">
               <MdPhone className="text-2xl" />
               <span>+91 9999999999</span>
             </div>
 
-            <div className="flex items-center gap-3 text-[16px] text-black">
+            <div className="flex items-center gap-3 text-[18px] text-black">
               <MdLocationOn className="text-2xl" />
               <span>B Block Noida Sector 15 Uttar Pradesh</span>
             </div>
