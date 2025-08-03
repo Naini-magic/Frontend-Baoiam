@@ -7,10 +7,10 @@ const PlacementSupport = () => {
       <div className="max-w-6xl w-full flex flex-col sm:flex-row justify-between gap-10">
         {/* Heading */}
         <div className="max-w-xl">
-        <h2 className="text-2xl md:text-[48px] font-bold text-gray-900 leading-snug mb-6">
+        <h2 className="text-2xl md:text-[48px] font-bold text-black leading-snug mb-6">
           Our Dedicated <br className="md:hidden" />
           <span className="text-black">Placement Team is</span><br className="md:hidden" />
-          committed to get you a <span className="text-blue-600">Job</span>
+          committed to get you a <span className="text-orange-500">Job</span>
         </h2>
         </div>
 

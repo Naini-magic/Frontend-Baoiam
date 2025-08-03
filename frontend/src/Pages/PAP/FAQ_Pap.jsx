@@ -10,66 +10,37 @@ const FAQ_Pap = () => {
 
 const faqData = [
   {
-    question: "What is the Software Development Course (SDC)?",
-    answer:
-      "A Software Development course, in simple words, teaches you how to design and build applications using programming languages like Java, Python, and frameworks like React or Node.js. You'll gain hands-on experience in writing clean code, debugging, and deploying software solutions. This course is ideal for beginners and professionals looking to upskill and start a career in software development."
-  },
-  {
-    question: "Is this a certified course?",
-    answer:
-      "Yes, after successful completion, you'll receive a certification that demonstrates your proficiency in software development and is recognized by leading tech companies."
-  },
-  {
-    question: "Does this course require prior coding experience?",
-    answer:
-      "No prior coding knowledge is required. The course starts with the fundamentals of programming and gradually covers advanced concepts, making it suitable for absolute beginners."
-  },
-  {
-    question: "Does this course have real-time projects too?",
-    answer:
-      "Yes, you'll work on real-world projects like developing websites, building mobile apps, and creating APIs. These projects will help you build a strong portfolio to showcase your skills to potential employers."
-  },
-  {
     question: "Will Baoiam help me with interviews?",
     answer:
-      "Yes! We offer resume reviews, interview preparation, mock sessions, and guaranteed interview opportunities. When you enroll in our course, it's our responsibility to make you 100% job ready and place you with the best package."
+      "Yes! We offer resume reviews, interview preparation, mock sessions, and guaranteed interview opportunities. When you enrol in our course, it's our responsibility to make you 100% job ready and place you with the best package."
+  },
+  {
+    question: "How much do I pay after placement?",
+    answer:
+      "Pay after a Placement is a programme where you have to pay an upfront training fee of Rs 4999. The programme includes assessments, assignments, attendance, mock interviews, progress, and module completion. After completion of the programme, we will assist you with placement, and after being placed through our programme, you have to pay a total of Rs 30,000."
+  },
+  {
+    question: "What if I don’t get placed?",
+    answer:
+      "If you don't get placed from our programme, you don't have to pay us any fee except the initial training fee of Rs 4999."
+  },
+  {
+    question: "Do I need to pay anything before starting?",
+    answer:
+      "Yes, You have to pay an upfront fee for training, which is just Rs 4999."
+  },
+  {
+    question: "Do I need to have prior experience or technical knowledge?",
+    answer:
+      "No, it's not mandatory to have any prior experience or technical knowledge. Our programme is designed to assist you from basic to professional level. Just have some enthusiasm and keen mindset to learn."
   },
   {
     question: "How does the Pay After Placement (PAP) model work at Baoiam?",
     answer:
-      "Enroll in the programme and pay only an upfront training fee of ₹4999. In PAP we offer resume reviews, interview preparation, mock sessions, and guaranteed interview opportunities where you have to pay the full price of ₹30,000 after getting placement from our programme. The programme includes assessments, assignments, attendance, mock interviews, progress, and module completion. After completion of the programme, we will assist you with placement."
-  },
-  // {
-  //   question: "How much do I pay after placement?",
-  //   answer:
-  //     "Pay after Placement is a programme where you have to pay an upfront training fee of ₹4999. After being placed through our programme, you have to pay a total of ₹30,000."
-  // },
-  // {
-  //   question: "What if I don't get placed?",
-  //   answer:
-  //     "If you don't get placed from our programme, you don't have to pay us any fee except the initial training fee of ₹4999."
-  // },
-  // {
-  //   question: "Do I need to pay anything before starting?",
-  //   answer:
-  //     "Yes, You have to pay an upfront fee for training, which is just ₹4999."
-  // },
-  // {
-  //   question: "Do I need to have prior experience or technical knowledge?",
-  //   answer:
-  //     "No, it's not mandatory to have any prior experience or technical knowledge. Our programme is designed to assist you from basic to professional level. Just have some enthusiasm and keen mindset to learn."
-  // },
-  // {
-  //   question: "How long is the course duration?",
-  //   answer:
-  //     "The course duration typically ranges from 6 to 9 months, depending on the track and intensity you choose."
-  // },
-  // {
-  //   question: "Does this course provide placement assistance?",
-  //   answer:
-  //     "Yes, placement support is included with guidance on resume building, technical interviews, and connecting you with hiring partners in the software industry."
-  // }
+      "Enrol in the programme and pay only an upfront training fee of 4999. In PAP we offer resume reviews, interview preparation, mock sessions, and guaranteed interview opportunities where you have to pay the full price of Rs 30,000 after getting placement from our programme. The programme includes assessments, assignments, attendance, mock interviews, progress, and module completion. After completion of the programme, we will assist you with placement."
+  }
 ];
+
 
   const leftFaqs = faqData.slice(0, 3);
   const rightFaqs = faqData.slice(3);

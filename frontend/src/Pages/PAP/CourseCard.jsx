@@ -4,6 +4,9 @@ import { FaStar } from "react-icons/fa";
 import { FaUser, FaClock, FaChartBar } from "react-icons/fa";
 import { FiBarChart } from "react-icons/fi";
 import Head from "../../assets/Home/OurProgram/head.webp";
+import { Link } from "react-router-dom";
+import DS from "../../assets/Home/FeaturedCourses/DS_F.png";
+import DA from "../../assets/Home/FeaturedCourses/DA_F.png";
 
 const CourseCard = () => {
   const courseData = [
@@ -12,12 +15,20 @@ const CourseCard = () => {
       rating: 5.0,
       description:
         "Up skill on the most in demand skills in the market – Python, Excel, Power BI, SQL.",
+      brochure: "/Brochure/DS.pdf",
+      brochureName: "DataScience_Brochure.pdf",
+      link: "/DataScience",
+      image: DS,
     },
     {
       title: "Data Analysis Course",
       rating: 5.0,
       description:
         "Up skill on the most in demand skills in the market – Python, Excel, Power BI, SQL.",
+      brochure: "/Brochure/DA.pdf",
+      brochureName: "DataAnalysis_Brochure.pdf",
+      link: "/DataAnalysis",
+      image: DA,
     },
   ];
 
@@ -62,7 +73,7 @@ const CourseCard = () => {
             {/* Header */}
             <div className="relative rounded-xl overflow-hidden">
               <img
-                src={courseImg}
+                src={course.image}
                 alt="Course"
                 className="w-full h-48 object-cover"
               />
@@ -132,12 +143,20 @@ const CourseCard = () => {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-6">
-              <button className="flex-1 bg-[#FFE8D9E5] text-orange-500 font-medium py-2 rounded-md hover:bg-orange-300">
+              <a
+                href={course.brochure}
+                download={course.brochureName}
+                className="flex-1 bg-[#FFE8D9E5] text-orange-500 text-center font-medium py-2 rounded-md hover:bg-orange-300"
+              >
                 Brochure
-              </button>
-              <button className="flex-1 bg-orange-500 text-white font-medium py-2 rounded-md hover:bg-orange-300 hover:text-orange-500">
+              </a>
+
+              <Link
+                to={course.link}
+                className="flex-1 text-center bg-orange-500 text-white font-medium py-2 rounded-md hover:bg-orange-300 hover:text-orange-500"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         ))}

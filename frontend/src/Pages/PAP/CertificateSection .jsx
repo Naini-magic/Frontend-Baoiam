@@ -9,7 +9,7 @@ const CertificateSection = () => {
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-xl md:text-[32px] font-bold leading-snug mb-4">
             Department for Promotion of Industry and Internal Trade    <br />
-            Corporation <span className="text-red-500">(DPIIT)</span><br />
+            Corporation <span className="text-orange-500">(DPIIT)</span><br />
             Accredited Certificate
           </h2>
           <p className="text-black text-sm md:text-[24px] leading-relaxed max-w-md">
