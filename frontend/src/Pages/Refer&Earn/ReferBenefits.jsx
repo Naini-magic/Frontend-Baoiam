@@ -26,23 +26,23 @@ const ReferBenefits = () => {
               <input
                 type="text"
                 placeholder="Full Name *"
-                className="w-full px-4 py-2 rounded-md text-white focus:outline-none bg-white"
+                className="w-full px-4 py-2 rounded-md text-black focus:outline-none bg-white"
               />
             </div>
             <div>
               <h4 className="text-start text-white">Email *</h4>
               <input
                 type="text"
-                placeholder="Full Name *"
-                className="w-full px-4 py-2 rounded-md text-white focus:outline-none bg-white"
+                placeholder="Email*"
+                className="w-full px-4 py-2 rounded-md text-black focus:outline-none bg-white"
               />
             </div>
             <div>
               <h4 className="text-start text-white">Contact Number *</h4>
               <input
                 type="text"
-                placeholder="Full Name *"
-                className="w-full px-4 py-2 rounded-md text-white focus:outline-none bg-white"
+                placeholder="Contact Number"
+                className="w-full px-4 py-2 rounded-md text-black focus:outline-none bg-white"
               />
             </div>
             <button
