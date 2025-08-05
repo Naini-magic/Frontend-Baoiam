@@ -59,11 +59,32 @@ export default function HeroSection() {
             </ul>
 
             <div className="mt-4 flex flex-col sm:flex-row items-center gap-3 sm:gap-8">
-              <Link to="/DataScience" className="w-[80%] sm:w-auto">
-                <button className="bg-[#FF6501] rounded-lg text-white flex items-center justify-center gap-2 py-1.5 sm:py-2 px-3 sm:px-4 font-medium text-[14px] sm:text-xl hover:bg-[#FF650133] hover:text-orange-500 w-full">
+              {/* <Link to="/DataScience" className="w-[80%] sm:w-auto">
+                <button className="bg-[#FF6501] rounded-lg text-white flex items-center justify-center gap-2 py-1.5 sm:py-2 px-3 sm:px-4 font-medium text-[14px] sm:text-xl hover:bg-[#FF650133] hover:text-orange-500 w-full"
+                 onClick={() => setShowModal(true)}>
                   Apply Now →
                 </button>
-              </Link>
+              </Link> */}
+              <div className="w-[80%] sm:w-auto">
+                 <button className="bg-[#FF6501] rounded-lg text-white flex items-center justify-center gap-2 py-1.5 sm:py-2 px-3 sm:px-4 font-medium text-[14px] sm:text-xl hover:bg-[#FF650133] hover:text-orange-500 w-full"
+                 onClick={() => setShowModal(true)}>
+                  Apply Now →
+                </button>
+
+                {showModal && (
+                  <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <div
+                      className="relative max-w-xl w-full"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ContactForm onClose={() => setShowModal(false)} />
+                    </div>
+                  </div>
+                )}
+              </div>
               <div className="w-[80%] sm:w-auto">
                 <button
                   className="bg-black text-white border rounded-lg py-1.5 sm:py-2 px-3 sm:px-4 text-[14px] sm:text-xl hover:bg-[#7B7B7B] w-full"
