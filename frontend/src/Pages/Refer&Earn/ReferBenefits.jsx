@@ -41,7 +41,7 @@ const ReferBenefits = () => {
               <h4 className="text-start text-white">Contact Number *</h4>
               <input
                 type="text"
-                placeholder="Contact Number"
+                placeholder="Contact Number *"
                 className="w-full px-4 py-2 rounded-md text-black focus:outline-none bg-white"
               />
             </div>
