@@ -101,9 +101,9 @@ const faqData = [
           Frequently Asked Questions
         </h2>
         <p className="text-center mb-8 text-[12px] sm:text-[18px]">
-          Still you have any questions? Contact our Team via
+          You still have any questions? Contact our Team via
           <br />
-          <a href="mailto:support@baoiam.com">support@baoiam.com</a>
+          <a href="mailto:support@baoiam.com" className="text-blue-700">support@baoiam.com</a>
         </p>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Column */}

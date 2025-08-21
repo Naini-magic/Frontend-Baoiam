@@ -1,12 +1,14 @@
 import React from "react";
 import courseImg from "../../assets/PAP/CourseImg.png";
 import { FaStar } from "react-icons/fa";
+import { FaRedo } from "react-icons/fa";
 import { FaUser, FaClock, FaChartBar } from "react-icons/fa";
 import { FiBarChart } from "react-icons/fi";
-import Head from "../../assets/Home/OurProgram/head.webp";
+// import Head from "../../assets/Home/OurProgram/head.webp";
 import { Link } from "react-router-dom";
 import DS from "../../assets/Home/FeaturedCourses/DS_F.png";
 import DA from "../../assets/Home/FeaturedCourses/DA_F.png";
+import Head from "../../assets/PAP/head.png";
 
 const CourseCard = () => {
   const courseData = [
@@ -37,9 +39,8 @@ const CourseCard = () => {
       {/* Heading */}
       <h2 className="text-[32px] md:text-[36px] font-semibold text-center mb-2">
         Our courses with{" "}
-        <span className="text-orange-500 font-bold">
-          Pay after Placement Options
-        </span>
+        <span className="text-orange-500 font-bold">Pay after Placement</span>{" "}
+        Options
       </h2>
       <p className="text-center text-black mb-10 text-[20px]">
         From learning to earning — payment comes after placement
@@ -55,11 +56,11 @@ const CourseCard = () => {
             <div className="flex items-center justify-between mt-4">
               {/* Left: Image + Title */}
               <div className="flex items-center gap-2">
-                {/* <img
+                <img
                   src={Head}
-                  alt="logo_head"
-                  className="w-6 h-6 sm:w-[32px] sm:h-[32px] object-cover"
-                /> */}
+                  alt="Head Icon"
+                  className="w-6 h-6 sm:w-6 sm:h-6 object-contain"
+                />
                 <h3 className="text-lg font-bold">{course.title}</h3>
               </div>
 
@@ -130,7 +131,7 @@ const CourseCard = () => {
               {/* Next Batch */}
               <div className="flex items-center justify-between gap-6">
                 <div className="flex items-center gap-2">
-                  <FiBarChart className="text-red-400 text-lg" />
+                  <FaRedo className="text-red-400 text-lg" />
                   <span className="font-medium text-gray-900">Next Batch</span>
                 </div>
                 <span className="text-right">
@@ -142,7 +143,7 @@ const CourseCard = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-7 mt-6">
               <a
                 href={course.brochure}
                 download={course.brochureName}

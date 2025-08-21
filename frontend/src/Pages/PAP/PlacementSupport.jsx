@@ -1,57 +1,61 @@
 import React from "react";
-import { FaBuilding, FaUserTie, FaUsers, FaBrain } from "react-icons/fa";
+import { FaBriefcase, FaUserTie, FaFileAlt, FaBrain } from "react-icons/fa";
 
 const PlacementSupport = () => {
   return (
     <div className="bg-white py-10 px-4 flex justify-center font-['Poppins']">
-      <div className="max-w-6xl w-full flex flex-col sm:flex-row justify-between gap-10">
+      <div className="max-w-5xl w-full flex flex-col items-center text-center">
+        
         {/* Heading */}
-        <div className="max-w-xl">
-        <h2 className="text-2xl md:text-[48px] font-bold text-black leading-snug mb-6">
-          Our Dedicated <br className="md:hidden" />
-          <span className="text-black">Placement Team is</span><br className="md:hidden" />
-          committed to get you a <span className="text-orange-500">Job</span>
+        <h2 className="text-2xl md:text-[48px] font-semibold text-black leading-snug mb-10">
+          Our Dedicated Placement Team <br className="hidden md:block" />
+          is committed to get you a{" "}
+          <span className="text-orange-500">Job</span>
         </h2>
-        </div>
 
         {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 ml-12 sm:ml-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
           {/* Feature 1 */}
-          <div className="flex items-start gap-3 ">
-            <FaBuilding className="text-blue-600 text-2xl mt-1" />
-            <p className="text-gray-700 text-lg">
-              Exclusive access to our <br />partner companies
+          <div className="flex items-center gap-4">
+            <div className="bg-orange-100 p-3 rounded-lg">
+              <FaBriefcase className="text-orange-500 text-2xl" />
+            </div>
+            <p className="text-black text-[24px] ">
+              Exclusive access to our <br /> partner companies
             </p>
           </div>
 
           {/* Feature 2 */}
-          <div className="flex items-start gap-3">
-            <FaUserTie className="text-blue-600 text-2xl mt-1" />
-            <p className="text-gray-700 text-lg">
+          <div className="flex items-center gap-4">
+            <div className="bg-orange-100 p-3 rounded-lg">
+              <FaUserTie className="text-orange-500 text-2xl" />
+            </div>
+            <p className="text-black text-[24px] ">
               1v1 experts sessions
             </p>
           </div>
 
           {/* Feature 3 */}
-          <div className="flex items-start gap-3">
-            <FaUsers className="text-blue-600 text-2xl mt-1" />
-            <p className="text-gray-700 text-lg">
-              Resume, LinkedIn, <br />Portfolio building
+          <div className="flex items-center gap-4">
+            <div className="bg-orange-100 p-3 rounded-lg">
+              <FaFileAlt className="text-orange-500 text-2xl" />
+            </div>
+            <p className="text-black text-[24px] ">
+              Resume, Linkedin, <br /> Portfolio building
             </p>
           </div>
 
           {/* Feature 4 */}
-          <div className="flex items-start gap-3">
-            <FaBrain className="text-blue-600 text-2xl mt-1" />
-            <p className="text-gray-700 text-lg">
-              Soft Skills, HR Interview <br />& Aptitude Training
+          <div className="flex items-center gap-4">
+            <div className="bg-orange-100 p-3 rounded-lg">
+              <FaBrain className="text-orange-500 text-2xl" />
+            </div>
+            <p className="text-black text-[24px] ">
+              Soft Skills, HR Interview <br /> & Aptitude Training
             </p>
-            
           </div>
         </div>
-        
       </div>
-      
     </div>
   );
 };
