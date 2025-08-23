@@ -12,11 +12,11 @@ import "slick-carousel/slick/slick-theme.css";
 const services = [
   {
     title: 'Nexnott Dating App – for people who want real, not random.',
-    image: img1,
+    image: img2,
   },
   {
     title: 'Courses that will worth your time—training and job-ready.',
-    image: img2,
+    image: img1,
   },
   {
     title: 'Live classes where you can learn, and actually interact.',

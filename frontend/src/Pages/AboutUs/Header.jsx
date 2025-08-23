@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Home/Navbar.jsx';
 import AuthModal from "../../components/Auth/AuthModal.jsx"
+import ContactForm from "../../Pages/ContactForm";
 
 import img1 from "../../assets/AboutUs/img1.jpg";
 
 
 const Header = () => {
+  const [showModal, setShowModal] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -69,9 +71,23 @@ const Header = () => {
               <button className="bg-orange-500 text-white px-6 py-2 rounded-full  hover:text-orange-500 hover:bg-amber-100 border-orange-500 transition duration-200 w-full sm:w-auto">
                 Apply Now →
               </button>
-              <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-600 transition duration-200 w-full sm:w-auto">
+              <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-600 transition duration-200 w-full sm:w-auto"
+              onClick={() => setShowModal(true)}>
                 Talk to our Counsellor
               </button>
+              {showModal && (
+                  <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <div
+                      className="relative max-w-xl w-full"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ContactForm onClose={() => setShowModal(false)} />
+                    </div>
+                  </div>
+                )}
             </div>
           </div>
         </div>

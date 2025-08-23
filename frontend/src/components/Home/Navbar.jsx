@@ -41,8 +41,10 @@ const Navbar = ({ onSignUpClick, isLoggedIn, onLogout }) => {
   const [mobileKickstarterOpen, setMobileKickstarterOpen] = useState(false);
   const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
   const [openSubcategory, setOpenSubcategory] = useState(null);
-  const navigate = useNavigate(); //update this line to use useNavigate
-  const [showProfileDropdown, setShowProfileDropdown] = useState(false); // State for profile dropdown
+  const navigate = useNavigate(); 
+  const [showProfileDropdown, setShowProfileDropdown] = useState(false); 
+  const [isProgramsHovered, setIsProgramsHovered] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
 
   const kickstarterCourses = {
     "Success Fusion Program": [
@@ -79,22 +81,16 @@ const Navbar = ({ onSignUpClick, isLoggedIn, onLogout }) => {
     ],
   };
 
+  const handleLogout = () => {
+    onLogout();
+    setShowProfileDropdown(false);
+    navigate("/");
+  };
 
-const handleLogout = () => {
-  onLogout();
-  setShowProfileDropdown(false);
-  navigate("/"); 
-};
-
-
-
-const [profileImage] = useState(() => {
-  const randomIndex = Math.floor(Math.random() * profileImages.length);
-  return profileImages[randomIndex];
-});
-
-
-
+  const [profileImage] = useState(() => {
+    const randomIndex = Math.floor(Math.random() * profileImages.length);
+    return profileImages[randomIndex];
+  });
 
   return (
     <>
@@ -113,7 +109,7 @@ const [profileImage] = useState(() => {
         {/* Center Desktop Menu */}
         <div className="hidden md:flex justify-center items-center">
           <ul className="flex space-x-[33px] text-black text-[18px] ml-4">
-             <li className="relative inline-block">
+            <li className="relative inline-block">
               <NavLink
                 to="/PAP"
                 className={({ isActive }) =>
@@ -183,6 +179,41 @@ const [profileImage] = useState(() => {
               )}
             </li>
 
+            <li
+              className="relative cursor-pointer"
+              onMouseEnter={() => setIsProgramsHovered(true)}
+              onMouseLeave={() => setIsProgramsHovered(false)}
+            >
+              <span className="flex items-center hover:text-orange-500">
+                Programs
+                {isProgramsHovered ? (
+                  <FaChevronUp className="ml-2 text-black" size={14} />
+                ) : (
+                  <FaChevronDown className="ml-2 text-black" size={14} />
+                )}
+              </span>
+
+              {isProgramsHovered && (
+                <ul className="absolute bg-white text-black py-2 w-56 rounded shadow-lg z-10 text-[16px]">
+                  <Link to="/Udaan90">
+                    <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
+                      Udaan 90
+                    </li>
+                  </Link>
+                  <Link to="/Successfusion">
+                    <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
+                      Success Fusion
+                    </li>
+                  </Link>
+                  <Link to="/AIML">
+                    <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
+                      AI & ML
+                    </li>
+                  </Link>
+                </ul>
+              )}
+            </li>
+
             <li className="relative inline-block">
               <NavLink
                 to="/pride"
@@ -220,7 +251,7 @@ const [profileImage] = useState(() => {
               </NavLink>
             </li>
 
-            <li className="hover:text-orange-500">Success Stories</li>
+            {/* <li className="hover:text-orange-500">Success Stories</li> */}
 
             <li
               className="relative cursor-pointer"
@@ -244,7 +275,7 @@ const [profileImage] = useState(() => {
                     </li>
                   </Link>
                   <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
-                    Careers
+                    Success Stories
                   </li>
                   <li className="px-4 py-2 hover:bg-orange-500 hover:text-white">
                     Press
@@ -261,58 +292,51 @@ const [profileImage] = useState(() => {
             <IoMoon className="w-6 h-6 text-gray-800" />
           </button>
 
-
-            {isLoggedIn ? (
-
-          <div className="relative">
-            <button 
-              onClick={() => setShowProfileDropdown(!showProfileDropdown)}
-              className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100"
-            >
-              <img
+          {isLoggedIn ? (
+            <div className="relative">
+              <button
+                onClick={() => setShowProfileDropdown(!showProfileDropdown)}
+                className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100"
+              >
+                <img
                   src={profileImage}
-                   alt="Profile"
-                   className="w-[80px]  rounded-full object-cover"
-             />
-
+                  alt="Profile"
+                  className="w-[80px]  rounded-full object-cover"
+                />
+              </button>
+              {showProfileDropdown && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
+                  <Link
+                    to="/profile"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
+                    onClick={() => setShowProfileDropdown(false)}
+                  >
+                    Profile
+                  </Link>
+                  <Link
+                    to="/dashboard"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
+                    onClick={() => setShowProfileDropdown(false)}
+                  >
+                    Dashboard
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <button
+              onClick={onSignUpClick}
+              className="hidden md:inline-block bg-orange-500 text-white px-[20px] py-1 rounded-full text-16vw hover:text-orange-500 hover:bg-orange-50 border-2 border-orange-500"
+            >
+              Sign up
             </button>
-            {showProfileDropdown && (
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
-                <Link
-                  to="/profile"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
-                  onClick={() => setShowProfileDropdown(false)}
-                >
-                  Profile
-                </Link>
-                 <Link
-                  to="/dashboard"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
-                  onClick={() => setShowProfileDropdown(false)}
-                >
-                  Dashboard
-                 </Link>
-                <button
-                  onClick={handleLogout}
-                  className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
-                >
-                  Logout
-                </button>
-              </div>
-            )}
-          </div>
-        ) : (
-
-          
-           <button
-            onClick={onSignUpClick}
-            className="hidden md:inline-block bg-orange-500 text-white px-[20px] py-1 rounded-full text-16vw hover:text-orange-500 hover:bg-orange-50 border-2 border-orange-500"
-          >
-            Sign up
-          </button>
           )}
-
-        
 
           {/* Hamburger for mobile */}
           <button
@@ -403,6 +427,36 @@ const [profileImage] = useState(() => {
                 </div>
               )}
             </li>
+            {/* Programs dropdown for mobile */}
+            <li>
+              <div
+                className="flex items-center hover:text-orange-500 cursor-pointer"
+                onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+              >
+                Programs
+                {mobileProgramsOpen ? (
+                  <FaChevronUp className="ml-2" size={14} />
+                ) : (
+                  <FaChevronDown className="ml-2" size={14} />
+                )}
+              </div>
+              {mobileProgramsOpen && (
+                <ul className="ml-4 mt-2 space-y-2">
+                  <Link to="/Udaan90" onClick={() => setMobileMenuOpen(false)}>
+                    <li className="hover:text-orange-500">Udaan 90</li>
+                  </Link>
+                  <Link
+                    to="/Successfusion"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <li className="hover:text-orange-500">Success Fusion</li>
+                  </Link>
+                  <Link to="/AIML" onClick={() => setMobileMenuOpen(false)}>
+                    <li className="hover:text-orange-500">AI & ML</li>
+                  </Link>
+                </ul>
+              )}
+            </li>
 
             {/* Pride with gradient effect */}
             <li>
@@ -434,7 +488,7 @@ const [profileImage] = useState(() => {
               </li>
             </NavLink>
 
-            <li className="hover:text-orange-500">Success Stories</li>
+            {/* <li className="hover:text-orange-500">Success Stories</li> */}
 
             {/* Company dropdown for mobile */}
             <li>
@@ -454,7 +508,7 @@ const [profileImage] = useState(() => {
                   <Link to="/aboutUs">
                     <li className="hover:text-orange-500">About Us</li>
                   </Link>
-                  <li className="hover:text-orange-500">Careers</li>
+                  <li className="hover:text-orange-500">Success Stories</li>
                   <li className="hover:text-orange-500">Press</li>
                 </ul>
               )}
