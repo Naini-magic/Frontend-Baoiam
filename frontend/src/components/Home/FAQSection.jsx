@@ -110,14 +110,14 @@ export default function FAQSection() {
               <p className="mb-3 mt-4 text-[15px] sm:text-[16px]">
                 {item.answer}
               </p>
-              <div className="bg-gray-100 mt-3 border border-gray-200 p-4 rounded-lg flex items-center justify-between">
+              {/* <div className="bg-gray-100 mt-3 border border-gray-200 p-4 rounded-lg flex items-center justify-between">
                 <p className="text-[14px] sm:text-[16px] font-medium">
                   Enrollment Process for the Program
                 </p>
                 <button className="flex items-center justify-center rounded-full bg-white p-3 sm:p-4">
                   <FaArrowRight className="text-[14px] sm:text-[16px]" />
                 </button>
-              </div>
+              </div> */}
 
               {item.button && (
                 <a
